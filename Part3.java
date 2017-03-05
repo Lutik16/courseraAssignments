@@ -1,29 +1,24 @@
 /**
- * Created by anna on 2/15/17.
+ * Created by Lucy on 2/15/17.
  */
 public class Part3 {
-    public String twoOccurrences(String stringa, String stringb) {
-
-        String result = "";
+    public boolean twoOccurrences(String stringa, String stringb) {
 
         int firstOccur = stringb.indexOf(stringa);
         if(firstOccur>=0){
             int secondOccure = stringb.indexOf(stringa,firstOccur+1);
             if (secondOccure>=0){
-                return "True";
+                return true;
             }
             else {
-                return "False";
+                return false;
             }
         }
         else {
-            return "False";
+            return false;
         }
     }
-
     public String lastPart(String stringa, String stringb){
-
-        String result = " ";
 
         int firstOccur = stringb.indexOf(stringa);
         if (firstOccur <0) {
@@ -37,18 +32,16 @@ public class Part3 {
         }
 
     }
-
     public void testTwoOccurrences(){
         String stringa = "en";
         String stringb = "conveniently";
-        String x = twoOccurrences(stringa, stringb);
+        boolean x = twoOccurrences(stringa, stringb);
         System.out.println("String a is " + stringa);
         System.out.println("String b is " + stringb);
         System.out.println("String b contains string a more then once. " + "It is " + x);
 
         String lastPart = lastPart(stringa, stringb);
         System.out.println("The part of the string after "+ stringa + " in "+ stringb+ " is "+ lastPart);
-
 
         stringa = "by";
         stringb = "A story by Abby Long";
@@ -60,8 +53,6 @@ public class Part3 {
         lastPart = lastPart(stringa, stringb);
         System.out.println("The part of the string after "+ stringa + " in "+ stringb+ " is "+ lastPart);
 
-
-
         stringa = "cat";
         stringb = "Helicopter";
         x = twoOccurrences(stringa,stringb);
@@ -72,8 +63,6 @@ public class Part3 {
         lastPart = lastPart(stringa, stringb);
         System.out.println("The part of the string after "+ stringa + " in "+ stringb+ " is "+ lastPart);
 
-
-
         stringa = "ing";
         stringb = "Problem Solving";
         x = twoOccurrences(stringa,stringb);
@@ -83,9 +72,6 @@ public class Part3 {
 
         lastPart = lastPart(stringa, stringb);
         System.out.println("The part of the string after "+ stringa + " in "+ stringb+ " is "+ lastPart);
-
-
     }
-
 }
 
