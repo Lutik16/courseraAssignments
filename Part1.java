@@ -26,9 +26,10 @@ public class Part1 {
             return "";
         }
         return result;
-
     }
 
+
+    //comment
     public void testSimpleGene(){
         String dna = "AGTCTACGAAGTAATCG";
         System.out.println("DNA strand is "+ dna);
