@@ -5,10 +5,16 @@ import edu.duke.*;
  */
 
 public class Part4 {
-    public void readLines (){
-        URLResource yt = new URLResource ("http://www.dukelearntoprogram.com/course2/data/manylinks.html");
-        for (String x: yt.words()){
-            System.out.println(x);
+    public void findYoutubeLink (){
+        URLResource duke = new URLResource ("http://www.dukelearntoprogram.com/course2/data/manylinks.html");
+        for (String x: duke.words()){
+           int index = x.indexOf("youtube.com");
+           if (index>=0){
+               int endOfLink = x.indexOf("\"", index);
+               int startOfLink = x.lastIndexOf("\"", index);
+               String link = x.substring(startOfLink, endOfLink+1);
+               System.out.println(link);
+           }
         }
     }
 }
