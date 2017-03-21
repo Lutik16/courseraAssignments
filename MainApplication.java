@@ -4,8 +4,8 @@
 public class MainApplication {
     public static void main (String [] args){
 
-        Part1 test=new Part1();
-        test.testSimpleGene();
+        Part4 test=new Part4();
+        test.findYoutubeLink();
 
     }
 
